@@ -4,7 +4,7 @@
 import { css } from "@emotion/css"
 import React, { useState } from 'react'
 
-const Page: React.FC<React.PropsWithChildren> = () => {
+export default function Page() {
   const [a, setA] = useState(1)
   const [b, setB] = useState(0)
   const [c, setC] = useState(0)
@@ -106,5 +106,3 @@ const Page: React.FC<React.PropsWithChildren> = () => {
     </div>
     )
 }
-
-export default Page

@@ -15,94 +15,100 @@ export default function Page() {
       <div className={css`
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
-
       `}>
-
-      <div className={css`
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-
-      `}>
-        <div className={css`
-          height: 60px;
-          width: 4px;
-          padding-right: 5px;
-          border-left: 1px solid black;
-          border-top: 1px solid black;
-          border-bottom: 1px solid black;
-        `}/>
-
-        <div className={css`
-          display:inline-grid;
-          grid-template-columns: 50px 50px;
-          grid-column-gap: 8px;
-        `}
-          >
-            <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)}/>
-            <input type="number" value={b} step=".1" onChange={(event) => setB(event.target.valueAsNumber)}/>
-            <input type="number" value={c} step=".1" onChange={(event) => setC(event.target.valueAsNumber)}/>
-            <input type="number" value={d} step=".1" onChange={(event) => setD(event.target.valueAsNumber)}/>
-        </div>
-
-        <div className={css`
-          height: 60px;
-          width: 4px;
-          padding-left: 5px;
-          border-right: 1px solid black;
-          border-top: 1px solid black;
-          border-bottom: 1px solid black;
-        `}/>
-        </div>
-
-        <div className={css`
-          padding: 8px;
-        `}> &times; </div>
-
         <div className={css`
           display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 150px;
-          height: 150px;
-        `}>
-          <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-            width={120}
-            height={120}
-            alt="Picture of a fruitbowl" 
-          />
+          flex-wrap: nowrap;`
+        }>
+          <div className={css`
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+          `}>
+
+            <div className={css`
+              height: 70px;
+              width: 6px;
+              padding-right: 5px;
+              border-left: 1px solid black;
+              border-top: 1px solid black;
+              border-bottom: 1px solid black;
+            `}/>
+
+            <div className={css`
+              display:inline-grid;
+              height: 50px;
+              grid-template-columns: 60px 60px;
+              grid-column-gap: 6px;
+              grid-row-gap: 4px;
+            `}>
+                <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)}/>
+                <input type="number" value={b} step=".1" onChange={(event) => setB(event.target.valueAsNumber)}/>
+                <input type="number" value={c} step=".1" onChange={(event) => setC(event.target.valueAsNumber)}/>
+                <input type="number" value={d} step=".1" onChange={(event) => setD(event.target.valueAsNumber)}/>
+            </div>
+
+            <div className={css`
+              height: 70px;
+              width: 6px;
+              padding-left: 5px;
+              border-right: 1px solid black;
+              border-top: 1px solid black;
+              border-bottom: 1px solid black;
+            `}/>
+          </div>
+
+          <div className={css`
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            font-size: 24px;
+          `}> &times; </div>
+
+          <div className={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 170px;
+            height: 170px;
+          `}>
+            <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
+              width={140}
+              height={140}
+              alt="Picture of a fruitbowl" 
+            />
+          </div>
         </div>
+
         <div className={css`
             display: flex;
             align-items: center;
-          `}>
+        `}>
           <p className={css`
             padding: 8px;
+            font-size: 24px;
           `}> = </p>
-        
+          
           <div className={css` 
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            width: 150px;
-            height: 150px;
+            width: 170px;
+            height: 170px;
           `}>
-          <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-            alt="Matrix linear transformation visualization"
-            width={120}
-            height={120} 
-            className={css`
-            transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
-            `}
-          />
-        </div>
-        
-          
-        </div>
-        
+            <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
+              alt="Matrix linear transformation visualization"
+              width={140}
+              height={140} 
+              className={css`
+              transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
+            `}/>
+          </div>
+        </div> 
       </div>
     </div>
-    )
+  )
 }

@@ -11,103 +11,98 @@ export default function Page() {
   const [d, setD] = useState(1)
 
   return (
-    <div>        
-      <div className={css`
+
+    <div className={css`
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-wrap: wrap;
       `}>
-        <div className={css`
+      <div className={css`
           display: flex;
-          flex-wrap: nowrap;`
-        }>
-          <div className={css`
+          align-items: center;
+          justify-content: center;
+          gap:20px;
+        `}>
+
+        <div className={css`
             display: flex;
             align-items: center;
-            padding: 1rem;
-          `}>
+        `}>
 
-            <div className={css`
+          <div className={css`
               height: 70px;
               width: 6px;
-              padding-right: 5px;
               border-left: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
-            `}/>
+            `} />
 
-            <div className={css`
+          <div className={css`
               display:inline-grid;
               height: 50px;
               grid-template-columns: 60px 60px;
               grid-column-gap: 6px;
               grid-row-gap: 4px;
             `}>
-                <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)}/>
-                <input type="number" value={b} step=".1" onChange={(event) => setB(event.target.valueAsNumber)}/>
-                <input type="number" value={c} step=".1" onChange={(event) => setC(event.target.valueAsNumber)}/>
-                <input type="number" value={d} step=".1" onChange={(event) => setD(event.target.valueAsNumber)}/>
-            </div>
+            <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)} />
+            <input type="number" value={b} step=".1" onChange={(event) => setB(event.target.valueAsNumber)} />
+            <input type="number" value={c} step=".1" onChange={(event) => setC(event.target.valueAsNumber)} />
+            <input type="number" value={d} step=".1" onChange={(event) => setD(event.target.valueAsNumber)} />
+          </div>
 
-            <div className={css`
+          <div className={css`
               height: 70px;
               width: 6px;
-              padding-left: 5px;
               border-right: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
-            `}/>
-          </div>
-
-          <div className={css`
-            display: flex;
-            align-items: center;
-            padding: 8px;
-            font-size: 24px;
-          `}> &times; </div>
-
-          <div className={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 170px;
-            height: 170px;
-          `}>
-            <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-              width={140}
-              height={140}
-              alt="Picture of a fruitbowl" 
-            />
-          </div>
+            `} />
         </div>
+
+        <div className={css`
+            font-size: 24px;
+            padding-left: 15px;
+          `}>&times;</div>
 
         <div className={css`
             display: flex;
             align-items: center;
-        `}>
-          <p className={css`
-            padding: 8px;
-            font-size: 24px;
-          `}> = </p>
-          
-          <div className={css` 
+            justify-content: center;
+            width: 170px;
+            height: 170px;
+          `}>
+          <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
+            width={140}
+            height={140}
+            alt="Picture of a fruitbowl"
+          />
+        </div>
+      </div>
+
+      <div className={css`
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 20px;
+        `}>
+        <p className={css`
+            padding: 8px;
+            font-size: 24px;
+          `}>=</p>
+
+        <div className={css`
+            display: flex;
+            align-items: center;
             overflow: hidden;
             width: 170px;
             height: 170px;
           `}>
-            <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-              alt="Matrix linear transformation visualization"
-              width={140}
-              height={140} 
-              className={css`
+          <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
+            alt="Matrix linear transformation visualization"
+            width={140}
+            height={140}
+            className={css`
               transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
-            `}/>
-          </div>
-        </div> 
+            `} />
+        </div>
       </div>
     </div>
   )

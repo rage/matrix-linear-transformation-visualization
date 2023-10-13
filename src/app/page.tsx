@@ -23,7 +23,7 @@ export default function Page() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap:20px;
+          gap:1rem;
         `}>
 
         <div className={css`
@@ -32,8 +32,8 @@ export default function Page() {
         `}>
 
           <div className={css`
-              height: 70px;
-              width: 6px;
+              height: 80px;
+              width: 8px;
               border-left: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
@@ -41,9 +41,9 @@ export default function Page() {
 
           <div className={css`
               display:inline-grid;
-              height: 50px;
+              height: 55px;
               grid-template-columns: 60px 60px;
-              grid-column-gap: 6px;
+              grid-column-gap: 4px;
               grid-row-gap: 4px;
             `}>
             <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)} />
@@ -53,8 +53,8 @@ export default function Page() {
           </div>
 
           <div className={css`
-              height: 70px;
-              width: 6px;
+              height: 80px;
+              width: 8px;
               border-right: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
@@ -62,7 +62,7 @@ export default function Page() {
         </div>
 
         <div className={css`
-            font-size: 24px;
+            font-size: 26px;
             padding-left: 15px;
           `}>&times;</div>
 
@@ -70,12 +70,12 @@ export default function Page() {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 170px;
-            height: 170px;
+            width: 190px;
+            height: 190px;
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-            width={140}
-            height={140}
+            width={160}
+            height={160}
             alt="Picture of a fruitbowl"
           />
         </div>
@@ -88,20 +88,20 @@ export default function Page() {
         `}>
         <p className={css`
             padding: 8px;
-            font-size: 24px;
+            font-size: 26px;
           `}>=</p>
 
         <div className={css`
             display: flex;
             align-items: center;
             overflow: hidden;
-            width: 170px;
-            height: 170px;
+            width: 190px;
+            height: 190px;
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
             alt="Matrix linear transformation visualization"
-            width={140}
-            height={140}
+            width={160}
+            height={160}
             className={css`
               transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
             `} />

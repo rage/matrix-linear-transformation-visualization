@@ -23,7 +23,7 @@ export default function Page() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap:1rem;
+          gap:10px;
         `}>
 
         <div className={css`
@@ -42,7 +42,7 @@ export default function Page() {
           <div className={css`
               display:inline-grid;
               height: 55px;
-              grid-template-columns: 60px 60px;
+              grid-template-columns: 58px 58px;
               grid-column-gap: 4px;
               grid-row-gap: 4px;
             `}>
@@ -74,8 +74,8 @@ export default function Page() {
             height: 190px;
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-            width={160}
-            height={160}
+            width={155}
+            height={155}
             alt="Picture of a fruitbowl"
           />
         </div>
@@ -87,7 +87,6 @@ export default function Page() {
             gap: 20px;
         `}>
         <p className={css`
-            padding: 8px;
             font-size: 26px;
           `}>=</p>
 
@@ -100,8 +99,8 @@ export default function Page() {
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
             alt="Matrix linear transformation visualization"
-            width={160}
-            height={160}
+            width={155}
+            height={155}
             className={css`
               transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
             `} />

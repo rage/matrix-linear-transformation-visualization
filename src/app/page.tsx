@@ -16,8 +16,8 @@ export default function Page() {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 770px;
-        margin: 4rem auto;
+        max-width: 760px;
+        margin: auto;
       `}>
       <div className={css`
           display: flex;

@@ -16,24 +16,26 @@ export default function Page() {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 760px;
+        max-width: 768px;
+        align-items: center;
+        overflow: hidden;
+        justify-content: space-between;
         margin: auto;
       `}>
       <div className={css`
           display: flex;
           align-items: center;
-          justify-content: center;
-          gap:10px;
+          justify-content: space-between;
+          width:65%;
         `}>
 
         <div className={css`
             display: flex;
             align-items: center;
-        `}>
-
+          `}>
           <div className={css`
-              height: 80px;
-              width: 8px;
+              height: 95px;
+              width: 10px;
               border-left: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
@@ -41,10 +43,11 @@ export default function Page() {
 
           <div className={css`
               display:inline-grid;
-              height: 55px;
-              grid-template-columns: 58px 58px;
-              grid-column-gap: 4px;
-              grid-row-gap: 4px;
+              height: 65px;
+              grid-template-columns: 60px 60px;
+              grid-column-gap: 6px;
+              grid-row-gap: 6px;
+
             `}>
             <input type="number" value={a} step=".1" onChange={(event) => setA(event.target.valueAsNumber)} />
             <input type="number" value={b} step=".1" onChange={(event) => setB(event.target.valueAsNumber)} />
@@ -53,8 +56,8 @@ export default function Page() {
           </div>
 
           <div className={css`
-              height: 80px;
-              width: 8px;
+              height: 95px;
+              width: 10px;
               border-right: 1px solid black;
               border-top: 1px solid black;
               border-bottom: 1px solid black;
@@ -62,20 +65,21 @@ export default function Page() {
         </div>
 
         <div className={css`
-            font-size: 26px;
-            padding-left: 15px;
+            padding: 10px;
+            font-size: 30px;
           `}>&times;</div>
 
         <div className={css`
             display: flex;
             align-items: center;
+            padding-right: 25px;
             justify-content: center;
-            width: 190px;
-            height: 190px;
+            width: 200px;
+            height: 200px;
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
-            width={155}
-            height={155}
+            width={185}
+            height={185}
             alt="Picture of a fruitbowl"
           />
         </div>
@@ -84,23 +88,25 @@ export default function Page() {
       <div className={css`
             display: flex;
             align-items: center;
-            gap: 20px;
-        `}>
+            justify-content: space-between;
+          `}>
         <p className={css`
-            font-size: 26px;
+            font-size: 30px;
+            padding-right: 35px;
           `}>=</p>
 
         <div className={css`
             display: flex;
             align-items: center;
+            justify-content: center;
             overflow: hidden;
-            width: 190px;
-            height: 190px;
+            width: 200px;
+            height: 200px;
           `}>
           <img src="https://rage.github.io/introduction-to-matrix-calculus/static/c4b8116295cab8e3c208d824de6ffd01/5a46d/hedelmat.png"
             alt="Matrix linear transformation visualization"
-            width={155}
-            height={155}
+            width={185}
+            height={185}
             className={css`
               transform: matrix(${a}, ${b}, ${c} , ${d}, 0, 0);          
             `} />
